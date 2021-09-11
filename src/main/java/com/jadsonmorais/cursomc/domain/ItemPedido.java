@@ -6,10 +6,13 @@ import java.util.Objects;
 import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 @Entity
 public class ItemPedido implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
+	@JsonManagedReference
 	@EmbeddedId
 	private ItemPedidoPK id = new ItemPedidoPK();
 	
